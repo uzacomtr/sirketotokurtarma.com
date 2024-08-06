@@ -18,14 +18,14 @@ document.addEventListener('scroll', function () {
     const currentScrollTop = window.scrollY;
 
     if (currentScrollTop > lastScrollTop) {
-        // Scroll Down
+        // Aşağı kaydırma
         header.classList.add('hidden');
     } else {
-        // Scroll Up
+        // Yukarı kaydırma
         header.classList.remove('hidden');
     }
 
-    lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // For Mobile or negative scrolling
+    lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // Mobil veya negatif kaydırma için
 });
 
 document.querySelectorAll('.nav-button[href^="#"], .cta-button[href^="#"]').forEach(anchor => {
